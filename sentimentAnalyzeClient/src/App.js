@@ -55,7 +55,7 @@ class App extends React.Component {
       } else if (response.data === "negative"){
         output = <div style={{color:"red",fontSize:20}}>{response.data}</div>
       } else {
-        output = <div style={{color:"orange",fontSize:20}}>{response.data}</div>
+        output = <div style={{color:"yellow",fontSize:20}}>{response.data}</div>
       }
       this.setState({sentimentOutput:output});
     });
@@ -87,7 +87,7 @@ class App extends React.Component {
         {this.state.innercomp}
         <br/>
         <button className="btn-primary" onClick={this.sendForSentimentAnalysis}>Analyze Sentiment</button>
-        <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
+        <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotions</button>
         <br/>
             {this.state.sentimentOutput}
       </div>
